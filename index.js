@@ -4,7 +4,7 @@ const clicked_elements = {};
 
 const contarClicks = ($event) => {
     const clicked = $event.target; // Obtiene el elemento clickeado
-    const uniqueId = clicked.outerHTML; // Genera un identificador único basado en el outerHTML del elemento
+    const uniqueId = clicked.id; // obtiene el id del elemento (deben de existir en la vista)
 
     if (clicked_elements.hasOwnProperty(uniqueId)){
         clicked_elements[uniqueId]++;
